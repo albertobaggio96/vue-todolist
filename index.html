@@ -29,7 +29,7 @@
 
       <section>
         <ul>
-          <li v-for="(toDoItem , index) in toDoList" :class="toDoItem.areDid ? 'text-decoration-line-through' : ''">{{toDoItem.toDo.charAt(0).toUpperCase() +  toDoItem.toDo.substring(1) }} <button @click="toDoList.splice(index, 1)"><i class="fa-solid fa-x"></i></button> </li>
+          <li v-for="(toDoItem , index) in toDoList" @click="toDoItem.done = !toDoItem.done" :class="toDoItem.done ? 'text-decoration-line-through' : ''" >{{toDoItem.toDo.charAt(0).toUpperCase() +  toDoItem.toDo.substring(1) }} <button @click="toDoList.splice(index, 1)"><i class="fa-solid fa-x"></i></button> </li>
         </ul>
       </section>
     </main>

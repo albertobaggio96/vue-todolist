@@ -6,19 +6,19 @@ createApp({
       toDoList: [
         {
           toDo: "lavatrice",
-          areDid: trued
+          done: true
         },
         {
           toDo: "cucinare",
-          areDid: false
+          done: false
         },
         {
           toDo: "pulire",
-          areDid: true
+          done: true
         },
         {
           toDo: "studiare",
-          areDid: false
+          done: false
         },
       ],
       newToDo : "",
@@ -29,7 +29,7 @@ createApp({
     addToDoItem(newItem){
       let newItemObj = {
         toDo: newItem,
-        areDid: false
+        done: false
       }
       
       if(newItem.length > 2){
@@ -43,6 +43,5 @@ createApp({
       }
       this.newToDo = ""
     },
-
   }
 }).mount("#app");
