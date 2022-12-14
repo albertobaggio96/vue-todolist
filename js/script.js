@@ -6,7 +6,7 @@ createApp({
       toDoList: [
         {
           toDo: "lavatrice",
-          areDid: false
+          areDid: trued
         },
         {
           toDo: "cucinare",
@@ -14,7 +14,7 @@ createApp({
         },
         {
           toDo: "pulire",
-          areDid: false
+          areDid: true
         },
         {
           toDo: "studiare",
@@ -27,7 +27,6 @@ createApp({
   },
   methods:{
     addToDoItem(newItem){
-
       let newItemObj = {
         toDo: newItem,
         areDid: false
@@ -42,6 +41,8 @@ createApp({
       } else{
         alert("Inserisci più di due caratteri");
       }
-    }
+      this.newToDo = ""
+    },
+
   }
 }).mount("#app");
